@@ -3,6 +3,7 @@
   "packages": [
     { "id": "Git.Git", "name": "Git" },
     { "id": "OpenJS.NodeJS.LTS", "name": "Node.js (LTS)" },
+    { "id": "Postman.Postman", "name": "Postman" },
     {
       "id": "Python.Python.3.14",
       "name": "Python 3.14",

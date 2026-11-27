@@ -1,0 +1,6 @@
+{
+  "category": "Bancos de dados",
+  "packages": [
+    { "id": "RedisInsight.RedisInsight", "name": "Redis Insight" }
+  ]
+}

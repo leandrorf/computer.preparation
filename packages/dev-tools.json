@@ -1,6 +1,14 @@
 {
   "category": "Ferramentas de desenvolvimento",
   "packages": [
-    { "id": "Git.Git", "name": "Git" }
+    { "id": "Git.Git", "name": "Git" },
+    {
+      "id": "Microsoft.VisualStudio.Community",
+      "name": "Visual Studio Community 2026",
+      "args": [
+        "--override",
+        "--quiet --wait --norestart --includeRecommended --add Microsoft.VisualStudio.Workload.NetWeb --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NativeDesktop --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.Data"
+      ]
+    }
   ]
 }

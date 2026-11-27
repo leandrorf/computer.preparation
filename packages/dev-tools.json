@@ -2,6 +2,7 @@
   "category": "Ferramentas de desenvolvimento",
   "packages": [
     { "id": "Git.Git", "name": "Git" },
+    { "id": "OpenJS.NodeJS.LTS", "name": "Node.js (LTS)" },
     {
       "id": "Microsoft.VisualStudio.Community",
       "name": "Visual Studio Community 2026",

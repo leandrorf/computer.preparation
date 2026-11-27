@@ -8,7 +8,8 @@ Lista de programas para instalar em um Windows recém-formatado, usando o [winge
 computer.preparation/
 ├── install.ps1          # script que lê os JSON e instala via winget
 ├── packages/            # um arquivo por categoria
-│   ├── dev-tools.json   # Git, ...
+│   ├── containers.json  # WSL 2, Docker Desktop
+│   ├── dev-tools.json   # Git, Visual Studio 2026, ...
 │   ├── editors.json     # Notepad++, VS Code, ...
 │   └── utilities.json   # 7-Zip, ...
 └── ssh/
@@ -49,6 +50,20 @@ Set-ExecutionPolicy -Scope Process Bypass -Force
 ```
 
 Pacotes que já estão instalados são pulados.
+
+> [!IMPORTANT]
+> **Docker Desktop: reinicie o PC depois da categoria `containers`.**
+> O instalador ativa os recursos do Windows *Plataforma de Máquina Virtual* e
+> *Subsistema do Windows para Linux*, que só passam a valer após reiniciar.
+> Depois do reboot:
+>
+> ```powershell
+> wsl --version                 # deve responder sem erro
+> wsl --update                  # se aparecer "Classe não registrada"
+> docker run hello-world        # com o Docker Desktop aberto
+> ```
+>
+> Requer virtualização habilitada na BIOS/UEFI (Intel VT-x / AMD-V).
 
 ## Adicionar um programa
 

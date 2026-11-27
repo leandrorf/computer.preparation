@@ -1,0 +1,6 @@
+{
+  "category": "Produtividade",
+  "packages": [
+    { "id": "XPFFZHVGQWWLHB", "name": "OneNote (Microsoft Store)", "args": ["--source", "msstore", "--locale", "pt-BR"] }
+  ]
+}

@@ -4,6 +4,11 @@
     { "id": "Git.Git", "name": "Git" },
     { "id": "OpenJS.NodeJS.LTS", "name": "Node.js (LTS)" },
     {
+      "id": "Python.Python.3.14",
+      "name": "Python 3.14",
+      "args": ["--override", "/quiet InstallAllUsers=1 PrependPath=1 Include_launcher=1 Include_test=0"]
+    },
+    {
       "id": "Microsoft.VisualStudio.Community",
       "name": "Visual Studio Community 2026",
       "args": [

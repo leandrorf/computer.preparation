@@ -1,6 +1,7 @@
 {
   "category": "Bancos de dados",
   "packages": [
-    { "id": "RedisInsight.RedisInsight", "name": "Redis Insight" }
+    { "id": "RedisInsight.RedisInsight", "name": "Redis Insight" },
+    { "id": "DBeaver.DBeaver.Community", "name": "DBeaver Community" }
   ]
 }

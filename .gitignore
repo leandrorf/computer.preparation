@@ -424,3 +424,17 @@ FodyWeavers.xsd
 
 # Official VS Code C# Dev Kit Extension exclusion
 #*.lscache
+
+## Chaves SSH: nunca commitar em texto aberto (somente ssh/ssh-keys.7z)
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+id_ecdsa
+id_ecdsa.pub
+known_hosts
+*.pem
+*.ppk
+
+## Lista de programas deste repo (a regra NuGet acima ignoraria packages/)
+!/packages/*.json

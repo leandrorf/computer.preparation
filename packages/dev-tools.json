@@ -1,0 +1,6 @@
+{
+  "category": "Ferramentas de desenvolvimento",
+  "packages": [
+    { "id": "Git.Git", "name": "Git" }
+  ]
+}

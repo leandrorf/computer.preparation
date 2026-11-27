@@ -1,0 +1,7 @@
+{
+  "category": "Editores",
+  "packages": [
+    { "id": "Notepad++.Notepad++", "name": "Notepad++" },
+    { "id": "Microsoft.VisualStudioCode", "name": "Visual Studio Code" }
+  ]
+}

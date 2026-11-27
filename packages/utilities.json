@@ -1,0 +1,6 @@
+{
+  "category": "Utilitarios",
+  "packages": [
+    { "id": "7zip.7zip", "name": "7-Zip" }
+  ]
+}

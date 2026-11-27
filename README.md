@@ -51,19 +51,25 @@ Set-ExecutionPolicy -Scope Process Bypass -Force
 .\install.ps1 -Category editors, dev-tools -WhatIf   # só mostra o que faria
 ```
 
-Pacotes que já estão instalados são pulados.
+Pacotes que já estão instalados são pulados (exceto os marcados com `"upgrade": true`,
+que são atualizados).
 
 > [!IMPORTANT]
 > **Docker Desktop: reinicie o PC depois da categoria `containers`.**
-> O instalador ativa os recursos do Windows *Plataforma de Máquina Virtual* e
-> *Subsistema do Windows para Linux*, que só passam a valer após reiniciar.
+> O script ativa os recursos do Windows *Plataforma de Máquina Virtual* e
+> *Subsistema do Windows para Linux*, que só passam a valer após reiniciar,
+> e mostra um aviso no final quando o reboot é necessário.
+> Não abra o Docker Desktop antes de reiniciar. Se abrir, ele falha com
+> `DockerDesktop/Wsl/CommandTimedOut`.
 > Depois do reboot:
 >
 > ```powershell
-> wsl --version                 # deve responder sem erro
-> wsl --update                  # se aparecer "Classe não registrada"
+> wsl --version                 # deve responder na hora
 > docker run hello-world        # com o Docker Desktop aberto
 > ```
+>
+> Se `wsl --version` travar mesmo após reiniciar, rode `.\install.ps1 -Category containers`
+> de novo (ele atualiza o WSL) e reinicie outra vez.
 >
 > Requer virtualização habilitada na BIOS/UEFI (Intel VT-x / AMD-V).
 
@@ -81,5 +87,13 @@ Campo opcional `args` para parâmetros extras do winget:
 ```json
 { "id": "Python.Python.3.12", "name": "Python 3.12", "args": ["--scope", "machine"] }
 ```
+
+Outros campos opcionais:
+
+| Campo             | Efeito                                                                 |
+|-------------------|------------------------------------------------------------------------|
+| `windowsFeatures` | recursos do Windows ativados antes de instalar (`Enable-WindowsOptionalFeature`) |
+| `upgrade`         | `true`: se já estiver instalado, roda `winget upgrade` em vez de pular |
+| `reboot`          | `true`: mostra o aviso de reinício no final quando o pacote é instalado/atualizado |
 
 Todos os pacotes são instalados com `-e --silent --accept-package-agreements --accept-source-agreements`.

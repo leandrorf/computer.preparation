@@ -1,11 +1,18 @@
 {
   "category": "Containers",
   "packages": [
-    { "id": "Microsoft.WSL", "name": "Windows Subsystem for Linux (WSL 2)" },
+    {
+      "id": "Microsoft.WSL",
+      "name": "Windows Subsystem for Linux (WSL 2)",
+      "windowsFeatures": ["Microsoft-Windows-Subsystem-Linux", "VirtualMachinePlatform"],
+      "upgrade": true,
+      "reboot": true
+    },
     {
       "id": "Docker.DockerDesktop",
       "name": "Docker Desktop",
-      "args": ["--override", "install --quiet --accept-license --backend=wsl-2"]
+      "args": ["--override", "install --quiet --accept-license --backend=wsl-2"],
+      "reboot": true
     }
   ]
 }

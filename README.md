@@ -8,7 +8,7 @@ Lista de programas para instalar em um Windows recém-formatado, usando o [winge
 computer.preparation/
 ├── install.ps1          # script que lê os JSON e instala via winget
 ├── packages/            # um arquivo por categoria
-│   ├── containers.json  # WSL 2, Docker Desktop
+│   ├── containers.json  # WSL 2, Ubuntu 24.04, Docker Desktop
 │   ├── databases.json   # Redis Insight, DBeaver, ...
 │   ├── dev-tools.json   # Git, Visual Studio 2026, ...
 │   ├── editors.json     # Notepad++, VS Code, ...
@@ -65,6 +65,7 @@ que são atualizados).
 >
 > ```powershell
 > wsl --version                 # deve responder na hora
+> ubuntu2404.exe                # 1a execucao: cria o usuario/senha do Ubuntu
 > docker run hello-world        # com o Docker Desktop aberto
 > ```
 >

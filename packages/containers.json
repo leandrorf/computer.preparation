@@ -8,6 +8,7 @@
       "upgrade": true,
       "reboot": true
     },
+    { "id": "Canonical.Ubuntu.2404", "name": "Ubuntu 24.04 LTS (WSL)" },
     {
       "id": "Docker.DockerDesktop",
       "name": "Docker Desktop",
